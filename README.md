@@ -25,7 +25,7 @@ Kullandığım Teknolojiler <br>
 
 ### :triangular_flag_on_post: Ana Sayfa
 <div align="center">
-  <img src="https://github.com/melihcolak0/My_Portfolio/blob/8ffe72118e72a838348e73590a77b33e9714aaac/ss/localhost_7208_Default_Index.png" alt="image alt">
+  <img src="https://github.com/melihcolak0/My_Portfolio/blob/0c67d8a188bdd88b167afe8646fee30c5f4d09a1/default.png" alt="image alt">
 </div>
 <div align="center">
   <img src="https://github.com/melihcolak0/My_Portfolio/blob/c230f9573a7f8d80d41b4db93f516b2703a23894/ss2/contact2.jpg" alt="image alt">
