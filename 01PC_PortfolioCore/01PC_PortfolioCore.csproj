@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\MyResume-1.0.0\.DS_Store" />
+    <None Include="wwwroot\MyResume-1.0.0\assets\.DS_Store" />
     <None Include="wwwroot\sidebar-03\.DS_Store" />
     <None Include="wwwroot\sidebar-03\css\.DS_Store" />
     <None Include="wwwroot\sidebar-03\css\bootstrap\.DS_Store" />
@@ -17,9 +19,27 @@
     <None Include="wwwroot\sidebar-03\js\.DS_Store" />
     <None Include="wwwroot\sidebar-03\scss\.DS_Store" />
     <None Include="wwwroot\sidebar-03\scss\bootstrap\.DS_Store" />
+    <None Include="wwwroot\simple-404-template-master\404.html" />
+    <None Include="wwwroot\simple-404-template-master\assets\css\style.css" />
+    <None Include="wwwroot\simple-404-template-master\assets\images\404.svg" />
+    <None Include="wwwroot\simple-404-template-master\favicon.png" />
+    <None Include="wwwroot\simple-404-template-master\LICENSE" />
+    <None Include="wwwroot\simple-404-template-master\README.md" />
+    <None Include="wwwroot\simple-404-template-master\screenshot\dekstop-ss.png" />
+    <None Include="wwwroot\simple-404-template-master\screenshot\mobile-browser.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.36" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.36">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.36" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.36">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.18" />
   </ItemGroup>
 

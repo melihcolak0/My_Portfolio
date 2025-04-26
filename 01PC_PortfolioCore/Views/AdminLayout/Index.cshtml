@@ -1,18 +1,19 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
 <!doctype html>
 <html lang="en">
-@Html.Partial("HeaderPartail", "AdminLayout")
+@Html.Partial("/Views/AdminLayout/HeaderPartail.cshtml")
 <body>
     <div class="wrapper d-flex align-items-stretch">
 
-        @Html.Partial("SideBarPartial", "AdminLayout")
+        @Html.Partial("/Views/AdminLayout/SideBarPartial.cshtml")
        
         <div id="content" class="p-4 p-md-5 pt-5">            
             @RenderBody()
         </div>
     </div>
-    @Html.Partial("ScriptPartial", "AdminLayout")
+    @Html.Partial("/Views/AdminLayout/ScriptPartial.cshtml")
 </body>
 </html>

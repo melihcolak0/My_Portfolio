@@ -1,0 +1,25 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "UpdateContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<h4>İletişim Bilgisi Güncelleme</h4>
+<br />
+<form class="form-group" method="post">
+    <label>Id</label>
+    <input type="text" class="form-control" asp-for="ContactId" style="border:1px solid black" readonly />
+    <br />
+    <label>Adres</label>
+    <input type="text" class="form-control" asp-for="Address" style="border:1px solid black" />
+    <br />
+    <label>Telefon No</label>
+    <input type="text" class="form-control" asp-for="PhoneNumber" style="border:1px solid black" />
+    <br />
+    <label>E-Mail</label>
+    <input type="text" class="form-control" asp-for="Email" style="border:1px solid black" />
+    <br />
+    <label>Konum</label>
+    <input type="text" class="form-control" asp-for="Location" style="border:1px solid black" />
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>

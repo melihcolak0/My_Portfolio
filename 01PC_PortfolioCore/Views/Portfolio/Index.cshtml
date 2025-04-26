@@ -1,0 +1,71 @@
+﻿@model List<Portfolio>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-4">Proje Listesi</h4>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card text-white shadow" style="
+                    height: 220px;
+                    width: 470px;
+                    background-size: cover;
+                    background-position: center;
+                    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('@item.ImageUrl');">
+
+                    <div class="card-body d-flex flex-column justify-content-between h-100">
+
+                        <div>
+                            <h6 class="fs-6 fw-semibold">@item.Title</h6>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal-@item.PortfolioId" class="text-white">
+                                <i class="bi bi-zoom-in fs-5"></i>
+                            </a>
+
+                            <div>
+                                <a href="/Portfolio/UpdatePortfolio/@item.PortfolioId" class="text-warning me-2" title="Güncelle">
+                                    <i class="bi bi-pencil-square fs-5"></i>
+                                </a>
+                                <a href="/Portfolio/DeletePortfolio/@item.PortfolioId" class="text-danger" title="Sil">
+                                    <i class="bi bi-trash fs-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imageModal-@item.PortfolioId" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content bg-light position-relative">
+
+                        <div class="p-4 pb-0">
+                            <h5 class="text-dark mb-1">@item.Title</h5>
+                            <p class="text-muted mb-0">@item.Description</p>
+                        </div>
+
+                        <button type="button" class="btn-close btn-close-dark position-absolute" style="top: 1rem; right: 1rem;" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                        <div class="modal-body text-center pt-0">
+                            <img src="@item.ImageUrl" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }        
+    </div>
+    <a href="/Portfolio/CreatePortfolio" class="btn btn-info">Yeni Proje Ekle</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

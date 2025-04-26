@@ -1,0 +1,29 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "CreatePortfolio";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Yeni Proje Ekleme</h4>
+<br />
+<form class="form-group" method="post">
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" style="border:1px solid black" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" style="border:1px solid black" />
+    <br />
+    <label>Resim Url</label>
+    <input type="text" class="form-control" asp-for="ImageUrl" style="border:1px solid black" />
+    @*<br />
+    <label>Kategori</label>   
+    @Html.DropDownListFor(x => x.CategoryId, (SelectList)ViewBag.v, "--Seçiniz--", new { @class = "form-control", @style = "border:1px solid black;" }) *@
+    <br />
+    <label>Kategori</label>
+    <select asp-for="CategoryId" asp-items="ViewBag.v" class="form-control" style="border:1px solid black">
+        <option value="">--Seçiniz--</option>
+    </select>
+    <br />
+    <button class="btn btn-primary">Ekle</button>
+</form>
+

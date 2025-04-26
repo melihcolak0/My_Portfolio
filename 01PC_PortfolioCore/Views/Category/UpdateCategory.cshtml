@@ -1,0 +1,19 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "UpdateCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<h4>Kategori Güncelleme</h4>
+<br />
+<form class="form-group" method="post">
+    <label>Id</label>
+    <input type="text" class="form-control" asp-for="CategoryId" style="border:1px solid black" readonly />
+    <br />
+    <label>Kategori</label>
+    <input type="text" class="form-control" asp-for="CategoryName" style="border:1px solid black" />
+    <br />
+    <label>Sınıf</label>
+    <input type="text" class="form-control" asp-for="ClassName" style="border:1px solid black" />
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>

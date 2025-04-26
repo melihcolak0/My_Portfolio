@@ -1,0 +1,26 @@
+﻿@model List<JobTitle>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<h4>Pozisyon Listesi</h4>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Pozisyon</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.JobTitleId</td>
+            <td>@item.Title</td>
+            <td><a href="/JobTitle/DeleteJobTitle/@item.JobTitleId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/JobTitle/UpdateJobTitle/@item.JobTitleId" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/JobTitle/AddJobTitle" class="btn btn-info">Yeni Pozisyon Ekle</a>

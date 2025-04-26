@@ -1,0 +1,25 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "UpdateMessage";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<h4>Mesaj Güncelleme</h4>
+<br />
+<form class="form-group" method="post">
+    <label>Id</label>
+    <input type="text" class="form-control" asp-for="MessageId" style="border:1px solid black" readonly />
+    <br />
+    <label>Adınız ve Soyadınız</label>
+    <input type="text" class="form-control" asp-for="NameSurname" style="border:1px solid black" />
+    <br />
+    <label>E-Mail</label>
+    <input type="text" class="form-control" asp-for="Email" style="border:1px solid black" />
+    <br />
+    <label>Konu</label>
+    <input type="text" class="form-control" asp-for="Subject" style="border:1px solid black" />
+    <br />
+    <label>Mesaj</label>
+    <textarea class="form-control" asp-for="MessageDetail" style="border:1px solid black; min-height: 120px;"></textarea>
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>

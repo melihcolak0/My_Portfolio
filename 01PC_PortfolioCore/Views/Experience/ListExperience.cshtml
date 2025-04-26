@@ -1,0 +1,31 @@
+﻿@model List<_01PC_PortfolioCore.Entities.Experience>
+@{
+    ViewData["Title"] = "ListExperience";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h4>Deneyim Listesi</h4>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.ExperienceId</td>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.ExperienceDate</td>         
+            <td><a href="/Experience/DeleteExperience/@item.ExperienceId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Experience/UpdateExperience/@item.ExperienceId" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Experience/AddExperience" class="btn btn-info">Yeni Deneyim Ekle</a>

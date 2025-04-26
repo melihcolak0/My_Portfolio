@@ -1,0 +1,13 @@
+﻿@model JobTitle
+@{
+    ViewData["Title"] = "AddJobTitle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<h4>Yeni Pozisyon Ekleme</h4>
+<br />
+<form class="form-group" method="post">
+    <label>Pozisyon</label>
+    <input type="text" class="form-control" asp-for="Title" style="border:1px solid black" />
+    <br />    
+    <button class="btn btn-primary">Ekle</button>
+</form>
